@@ -3,11 +3,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
 import Sidebar from "./Sidebar";
+import { useLocation } from "react-router-dom";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -24,30 +25,21 @@ const ProductList = () => {
     fetchProducts();
   }, []);
 
-  const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  useEffect(() => {
+    // Open sidebar if navigating to product details
+    if (location.pathname.includes("/product/")) {
+      setIsSidebarOpen(true);
+    } else {
+      setIsSidebarOpen(false);
+    }
+  }, [location.pathname]);
 
   return (
     <div className="relative">
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-      <button
-        onClick={() => setIsSidebarOpen(true)}
-        className="fixed top-4 left-4 z-50 bg-blue-500 text-white p-2 rounded-full shadow-lg"
-      >
-        Filter
-      </button>
-      <div className="container mx-auto px-4 py-4 ml-64">
-        <h1 className="text-2xl font-bold my-4">Product List</h1>
-        <input
-          type="text"
-          placeholder="Search by product name"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-gray-300 p-2 rounded-md mb-4 w-full md:w-1/2"
-        />
+      <div className="container mx-auto px-4 py-4 mt-40">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

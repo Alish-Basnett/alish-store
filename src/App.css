@@ -1,20 +1,18 @@
-/* General App Styling */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* General App Styling */
+
 .App {
-    text-align: center;
-    background-color: #f8f8f8;
-    font-family: "Arial", sans-serif;
+    @apply text-center bg-gray-100 font-sans;
 }
 
 
 /* Logo Styling */
 
 .App-logo {
-    height: 100px;
-    margin-bottom: 20px;
+    @apply h-24 mb-5;
     pointer-events: none;
 }
 
@@ -22,67 +20,54 @@
 /* Header Styling */
 
 .App-header {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 800px;
+    @apply bg-white p-10 shadow-lg rounded-lg my-10 mx-auto max-w-2xl;
 }
 
 
 /* Title Styling */
 
 .App-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin: 0;
+    @apply text-4xl text-gray-800 m-0;
 }
 
 
 /* Description Styling */
 
 .App-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 20px 0;
+    @apply text-lg text-gray-600 my-5;
 }
 
 
 /* Link Button Styling */
 
 .App-link {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #ff6f61;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    @apply inline-block px-6 py-3 text-white font-bold bg-red-400 rounded transition duration-300;
 }
 
 .App-link:hover {
-    background-color: #e55b4d;
+    @apply bg-red-500;
 }
 
 
 /* Footer Styling */
 
 .App-footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #888;
+    @apply mt-10 text-sm text-gray-500;
 }
+
+
+/* Logo Animation */
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
-        animation: App-logo-spin infinite 10s linear;
+        @apply animate-spin-slow;
     }
 }
 
-@keyframes App-logo-spin {
+
+/* Custom Keyframes for Spin */
+
+@keyframes spin-slow {
     from {
         transform: rotate(0deg);
     }
