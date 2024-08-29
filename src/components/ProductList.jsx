@@ -1,4 +1,3 @@
-// src/components/ProductList.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
@@ -16,7 +15,11 @@ const ProductList = () => {
         const response = await axios.get(
           "https://api.escuelajs.co/api/v1/products"
         );
-        setProducts(response.data);
+        // Filter products to include only those with IDs up to 48
+        const filteredProducts = response.data.filter(
+          (product) => product.id <= 48
+        );
+        setProducts(filteredProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
