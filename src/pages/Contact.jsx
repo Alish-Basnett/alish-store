@@ -167,6 +167,14 @@ const Contact = () => {
                 </a>
               </li>
               <li>Address: Pashupatinagar -4, Illam, Nepal</li>
+              <p className="mt-2">
+                PAN Number:
+                <a className="text-blue-600 hover:underline"> 301774048</a>
+              </p>
+              <p className="mt-2">
+                Registration Number:{" "}
+                <a className="text-blue-600 hover:underline"> 9530741065</a>{" "}
+              </p>
             </ul>
           </div>
 

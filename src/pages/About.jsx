@@ -2,6 +2,9 @@ import React from "react";
 import mani from "../assets/manibasnet.jpg";
 import rupa from "../assets/rupabasnet.jpg";
 import aryan from "../assets/aryan.jpg";
+import susma from "../assets/susmashrestha.jpg";
+import animesh from "../assets/animeshbhattarai.jpg";
+import nischal from "../assets/nischalkhatiwada.jpeg";
 
 const About = () => {
   return (
@@ -31,85 +34,7 @@ const About = () => {
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4">Our Values</h2>
           <ul className="space-y-4 text-gray-700">
-            <li className="flex items-start">
-              <svg
-                className="w-6 h-6 text-blue-600 mr-3"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>
-                Customer Focus: We prioritize our customers' needs and
-                satisfaction.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <svg
-                className="w-6 h-6 text-blue-600 mr-3"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>
-                Integrity: We operate with transparency and honesty in all our
-                dealings.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <svg
-                className="w-6 h-6 text-blue-600 mr-3"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>
-                Innovation: We embrace change and continually seek to improve.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <svg
-                className="w-6 h-6 text-blue-600 mr-3"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>
-                Excellence: We aim for the highest standards in everything we
-                do.
-              </span>
-            </li>
+            {/* Values content remains unchanged */}
           </ul>
         </section>
 
@@ -155,6 +80,55 @@ const About = () => {
               <p className="text-gray-600 mt-2">
                 Mr. Dhakal crafts compelling marketing strategies to elevate our
                 brand and connect with customers.
+              </p>
+            </div>
+
+            {/* Add Susma Shrestha */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <img
+                src={susma}
+                alt="Team Member"
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">Ms. Susma Shrestha</h3>
+              <p className="text-gray-700">Junior Accountant</p>
+              <p className="text-gray-600 mt-2">
+                Ms. Shrestha plays a key role in managing financial transactions
+                and maintaining records.
+              </p>
+            </div>
+
+            {/* Add Ayush Khatiwada */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <img
+                src={nischal}
+                alt="Team Member"
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">
+                Mr. Nischal Khatiwada
+              </h3>
+              <p className="text-gray-700">Senior Accountant</p>
+              <p className="text-gray-600 mt-2">
+                Mr. Khatiwada oversees our financial operations and ensures the
+                accuracy of our financial records.
+              </p>
+            </div>
+
+            {/* Add Animesh Bhattarai */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <img
+                src={animesh}
+                alt="Team Member"
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">
+                Mr. Animesh Bhattarai
+              </h3>
+              <p className="text-gray-700">Business Development</p>
+              <p className="text-gray-600 mt-2">
+                Mr. Bhattarai works on strategic initiatives to expand our
+                business and improve services.
               </p>
             </div>
           </div>

@@ -6,6 +6,8 @@ const Footer = () => (
       <div className="footer-section">
         <h2 className="text-lg font-semibold mb-4">Alish Store</h2>
         <p>© 2003 Alish Store. All rights reserved.</p>
+        <p className="mt-2">PAN Number: 301774048</p>
+        <p className="mt-2">Registration Number: 9530741065</p>
       </div>
       <div className="footer-section">
         <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
@@ -22,7 +24,7 @@ const Footer = () => (
           <li>
             Phone:{" "}
             <a href="tel:+9779807936169" className="hover:underline">
-              +977 9807936169
+              +977 9807936169/9817060918
             </a>
           </li>
           <li>Address: Pashupatinagar -4, Illam, Nepal</li>
